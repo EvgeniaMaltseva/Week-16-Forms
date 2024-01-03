@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/normalize.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Р Е Г И С Т Р А Ц И Я</h1>
+    </header>
+    <main>  
+    <div class="container">
+        <div class="registrationform">
+            <form name="form" class="form">
+                <label for="firstName" class="form__label">Введите имя*:</label>
+                <input type="text" id="firstName" name="firstName" class="form__input" placeholder="Имя" required />
+                <p class="error-message-firstName" id="errorMessageFirstName"></p>
+                <br />
+
+                <label for="lastName" class="form__label">Введите фамилию*:</label>
+                <input type="text" id="lastName" name="lastName" class="form__input" placeholder="Фамилия" required/>
+                <p class="error-message-lasttName" id="errorMessageLastName"></p>
+                <br />
+
+                <label for="email" class="form__label">Введите Email*:</label>
+                <input type="email" id="email" name="email" class="form__input" placeholder="Email" required />
+                <p class="error-message-email" id="errorMessageEmail"></p>
+                <br />
+
+                <label for="password" class="form__label">Введите пароль*:</label>
+                <input type="password" id="password" name="password" class="form__input" placeholder="Password" minlength="8" pattern ="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^\w\s]).{8,}" required />
+                <p class="error-message-password" id="errorMessagePassword" ></p>
+                <br />
+
+                <label for="age" class="form__label">Укажите возраст*:</label>
+                <input type="number" id="age" name="age" class="form__input" placeholder="Возраст" required/>
+                <p class="error-message-age" id="errorMessageAge"></p>
+                <br />
+
+                <!--<label for="gender" class="form__label">Укажите пол:</label>
+                <input type="text" id="gender" name="gender" class="form__input" />
+                <br />-->
+                <div class = indicateGender>
+                    <span class="gender">Укажите пол:</span> <br />
+                    <label class="form__label"> Женский </label>
+                    <input type="radio"  name="female" value="female" class="form__input" />
+                    <br />
+
+                    <label class="form__label"> Мужской </label>
+                    <input type="radio"  name="male" value="male" class="form__input" />
+                    <br />
+                    <p class="error-message-gender" id="errorMessageGender"></p>
+                </div>
+                <br />
+
+                <label for="select" class="form__label">Укажите профессию*:</label>
+                <select id="select" name="select" class="form__select" placeholder="Профессия" required>
+                    <option value="Опция 1">Врач</option>
+                    <option value="Опция 2">Программист</option>
+                    <option value="Опция 3">Учитель</option>
+                    <option value="Опция 4">Дизайнер</option>
+                    <option value="Опция 5">Инженер</option>
+                    <option value="Опция 6">Продавец</option>
+                    <option value="Опция 7">Другое</option>
+                </select>
+                <br />
+                <br/>
+
+                <div class="agreement">
+                    <input type="checkbox" id="agreement" name="agreement" class="form__checkbox" required />
+                    <label for="agreement">Согласие с обработкой данных*</label>
+                    <p class="error-message-agreement" id="errorMessageAgreement"></p>
+                </div>
+
+                <button type="submit" name="button" class="form__submit">Отправить</button>
+				<p class="error-message" id="errorMessage"></p>
+			</form>
+		</div>
+    </div>   
+    </main>  
+            
+
+
+
+
+
+
+<script src="./DianaregistrationformJS.js"></script>    
+</body>
+</html>
